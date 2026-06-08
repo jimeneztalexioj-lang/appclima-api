@@ -10,6 +10,14 @@ app.get("/", (req, res) => {
   res.send("API AppClima funcionando 🚀");
 });
 
+app.get("/clima", (req, res) => {
+  res.json({
+    ciudad: "Lima",
+    temperatura: 22,
+    estado: "Soleado"
+  });
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
